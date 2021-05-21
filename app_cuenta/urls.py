@@ -18,4 +18,5 @@ from . import views
 
 urlpatterns = [
     path('', views.accounts),
+    path('new/', views.transaccion_new, name='transaccion_new'),
 ]
