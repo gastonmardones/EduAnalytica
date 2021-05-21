@@ -43,3 +43,18 @@ table>tbody>tr>td {
 #boton-form{
     width: 150px;
 }
+
+/* .boton-redirect-container {
+    margin: 0;
+    text-align: center;
+    justify-content: center;
+} */
+
+#boton-redirect {
+    margin: 20px;
+}
+
+#boton-redirect a{
+    color: white;
+}
+

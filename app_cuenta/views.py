@@ -15,8 +15,11 @@ def transaccion_new(request):
 
     return render(request, 'forms/forms.html', {'form': form})
 
+
 def accounts(request):
     transacciones = Transaccion.objects.all()
     return render(request, 'app_cuenta/index.html', {'transacciones': transacciones})
 
 
+def blank(request):
+    return render(request, 'blank/blank.html')
