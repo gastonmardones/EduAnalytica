@@ -1,5 +1,6 @@
 {% extends 'app_cuenta/index.html' %}
 
+{% load crispy_forms_tags %}
 {% block content %}
 
 <div class="form">
@@ -9,6 +10,7 @@
         {{ form.as_table }}
         <input type="submit" value="Crear">
     </form>
+            {{ form|crispy }}
 </div>
 
 {% endblock %}
