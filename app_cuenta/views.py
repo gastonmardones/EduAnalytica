@@ -1,4 +1,3 @@
-from django.shortcuts import render
 from django.shortcuts import render, redirect
 from app_cuenta.forms import Form
 from app_cuenta.models import Transaccion
