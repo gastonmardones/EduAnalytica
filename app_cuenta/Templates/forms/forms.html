@@ -1,0 +1,14 @@
+{% extends 'app_cuenta/index.html' %}
+
+{% block content %}
+
+<div class="form">
+    <h2>Crear transacción</h2>
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_table }}
+        <input type="submit" value="Crear">
+    </form>
+</div>
+
+{% endblock %}
