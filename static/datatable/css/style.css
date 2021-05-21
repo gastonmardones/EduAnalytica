@@ -1,0 +1,45 @@
+.tabla-container {
+    margin: 20px;
+}
+
+.boton-crear{
+    text-align: center;
+    margin: 50px;
+}
+
+
+#link-button {
+    color: white;
+}
+
+table th {
+background-color: #49668ed4;
+color: white;
+}
+
+table>tbody>tr>td {
+    vertical-align: middle;
+}
+
+
+
+.form-container{
+    display: flex;
+    justify-content: center;
+}
+
+.tabla-container-form {
+    display: flex;
+    flex-direction:column;
+    margin-top: 50px;
+    width: 40%;
+}
+
+.boton-crear-form{
+    text-align: center;
+    margin: 30px;
+}
+
+#boton-form{
+    width: 150px;
+}
