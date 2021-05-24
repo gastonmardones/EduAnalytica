@@ -17,6 +17,6 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.accounts),
+    path('', views.Accounts.as_view(), name='accounts'),
     path('new/', views.transaccion_new, name='transaccion_new'),
 ]

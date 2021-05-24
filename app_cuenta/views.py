@@ -9,6 +9,15 @@ from django.views.generic import TemplateView, ListView
 class Blank(TemplateView):
     template_name = 'blank/blank.html'
 
+
+class Accounts(ListView):
+    template_name = 'app_cuenta/index.html'
+    model = Transaccion
+    #queryset = Transaccion.objects.all()      # Metodo predefinido dentro de ListView
+    #context_object_name = 'transacciones'     # Sino usa como context: 'nombredelmodelo_list'
+
+
+
 def transaccion_new(request):
     if request.method == 'POST':
         form = Form(request.POST)
@@ -21,10 +30,3 @@ def transaccion_new(request):
     return render(request, 'forms/forms.html', {'form': form})
 
 
-def accounts(request):
-    transacciones = Transaccion.objects.all()
-    return render(request, 'app_cuenta/index.html', {'transacciones': transacciones})
-
-
-def blank(request):
-    return render(request, 'blank/blank.html')
