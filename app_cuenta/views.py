@@ -3,7 +3,7 @@ from django.urls import reverse_lazy
 
 from app_cuenta.forms import TransaccionForm
 from app_cuenta.models import Transaccion
-from django.views.generic import TemplateView, ListView, CreateView, UpdateView
+from django.views.generic import TemplateView, ListView, CreateView, UpdateView, DeleteView
 
 
 # Create your views here.
@@ -31,6 +31,11 @@ class TransaccionUpdate(UpdateView):
     model = Transaccion
     template_name = 'forms/forms.html'
     form_class = TransaccionForm
+    success_url = reverse_lazy('accounts')
+
+
+class TransaccionDelete(DeleteView):
+    model = Transaccion
     success_url = reverse_lazy('accounts')
 
 
