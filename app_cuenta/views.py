@@ -1,5 +1,6 @@
 from django.shortcuts import render, redirect
 from django.urls import reverse_lazy
+
 from app_cuenta.forms import TransaccionForm
 from app_cuenta.models import Transaccion
 from django.views.generic import TemplateView, ListView, CreateView, UpdateView
@@ -25,15 +26,11 @@ class TransaccionCreate(CreateView):
     form_class = TransaccionForm
     success_url = reverse_lazy('accounts')
 
-def transaccion_new(request):
-    if request.method == 'POST':
-        form = Form(request.POST)
-        if form.is_valid():
-            form.save()
-            return redirect('http://127.0.0.1:8000/accounts/')
-    else:
-        form = Form()
 
-    return render(request, 'forms/forms.html', {'form': form})
+class TransaccionUpdate(UpdateView):
+    model = Transaccion
+    template_name = 'forms/forms.html'
+    form_class = TransaccionForm
+    success_url = reverse_lazy('accounts')
 
 
