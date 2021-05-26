@@ -7,8 +7,11 @@
     margin: 50px;
 }
 
+#link-button-editar {
+color :white!important;
+}
 
-#link-button {
+#link-button-crear {
     color: white;
 }
 

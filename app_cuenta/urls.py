@@ -17,6 +17,8 @@ from django.urls import path
 from . import views
 
 urlpatterns = [
-    path('', views.accounts),
-    path('new/', views.transaccion_new, name='transaccion_new'),
+    path('', views.Accounts.as_view(), name='accounts'),
+    path('new/', views.TransaccionCreate.as_view(), name='transaccion_new'),
+    path('update/<int:pk>/', views.TransaccionUpdate.as_view(), name='transaccion_update'),
+    path('delete/<int:pk>/', views.TransaccionDelete.as_view(), name='transaccion_delete'),
 ]

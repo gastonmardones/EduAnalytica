@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Update</title>
 
     <!-- <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.24/css/jquery.dataTables.css"> -->
 
@@ -26,8 +26,8 @@
         <form method="POST">
             {% csrf_token %}
             {{ form|crispy }}
-            <div class="boton-crear-form">
-                <input id="boton-form" type="submit" class="btn btn-primary" value="Crear">
+            <div class="boton-update-form">
+                <input id="boton-form-update" type="submit" class="btn btn-primary" value="Editar">
             </div>
         </form>
     </div>

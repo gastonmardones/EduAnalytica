@@ -28,11 +28,13 @@
                     <th>Descripcion</th>
                     <th>Débito</th>
                     <th>Crédito</th>
+                    <th></th>
+                    <th></th>
                 </tr>
             </thead>
             <tbody>
 
-            {% for transaccion in transacciones %}
+            {% for transaccion in transaccion_list %}
                 <tr>
                         <td>{{transaccion.numero_cuenta}}</td>
                         <td>{{transaccion.numero_comprobante}}</td>
@@ -40,6 +42,13 @@
                         <td>{{transaccion.descripcion}}</td>
                         <td>{{transaccion.debito}}</td>
                         <td>{{transaccion.credito}}</td>
+                        <td>
+                            <button type="button" class="btn btn-success">
+                                <a id="link-button-editar" href="{% url 'transaccion_update' transaccion.id %}">Editar</a>
+                            </button></td>
+                        <td>
+                            <a href="{% url 'transaccion_delete' transaccion.id %}"><button type="button" class="btn btn-danger">Eliminar</button></a>
+                        </td>
                 </tr>
             {% endfor %}
 
@@ -49,17 +58,13 @@
 
         <div class="boton-crear">
             <button type="button" class="btn btn-primary">
-                <a id="link-button" href="{% url 'transaccion_new' %}">Crear transacción</a>
+                <a id="link-button-crear" href="{% url 'transaccion_new' %}">Crear transacción</a>
             </button>
         </div>
     
    </div>
 
 
-
-    {% block content %}
-
-    {% endblock %}
 
 
 
